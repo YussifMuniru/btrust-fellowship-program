@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Bitcoin Wallet</title>
+    <link rel="stylesheet" href="/assets/css/main.css" type="text/css">
+   
+</head>
+<body>
+    <h1>Simple Bitcoin Wallet</h1>
+    <!-- <button id="generateAddress">Show Transaction Details</button>
+    <p><strong>Address:</strong> <span id="address"></span></p> -->
+
+    <!-- <h2>Make Transaction</h2> -->
+    <form id="sendForm">
+        <br />
+        <label for="preimage">Question 1:</label>
+        <button type="button" id="parseTransactions">Parse Transaction Hex</button>
+        <br /> <br /> <br />
+        <!-- <label for="hexString">Paste Transaction Hex ():</label> -->
+        <!-- <textarea cols="100" rows="12" type="text" id="hexString" required></textarea> -->
+        <label for="preimage">Question 2:</label>
+        <label for="preimage">Enter Script Hex:</label>
+        <textarea cols="50" rows="12" type="text" id="stackEvalHex" required> 010101029301038801027693010487 </textarea>
+        <button type="button" id="stackEval">Evalaute Script</button>
+       
+       
+        <br />
+        <label for="preimage">Question 3:</label>
+        <label for="preimage">Enter Preimage:</label>
+        <textarea cols="50" rows="12" type="text" id="preimage" required> Btrust Builders </textarea> 
+        <button type="button" id="getHexFromPreimage">Btrust Address</button>
+        <br />
+
+
+        <label for="preimageBtrust">Question 3a:</label>
+        <label for="scriptHex">Enter ScriptHex:</label>
+        <textarea cols="50" rows="12" type="text" id="scriptHex" required> 010101029301038801027693010487 </textarea>
+        <br />
+        <br />
+        <br />
+        <label for="amountForHex">Enter To Amount(Btc):</label>
+        <input type="text" id="amountForHex" value="1000" required> 
+        <button type="button" id="sendBTC">Send BTC</button>
+        <br />
+        <br />
+
+        <label for="preimageBtrust">Question 3b:</label>
+        <textarea cols="50" rows="12" type="text" id="preimageBtrust" required> 427472757374204275696c64657273 </textarea> 
+        <br />
+        <br />
+        <label for="amountForPrimage">Enter To Amount(Btc):</label>
+        <input type="text" id="amountForPrimage" value="1000" required> 
+        <button type="button" id="sendBtcPreimage">BTC to Btrust</button>
+        
+        <br />
+        <br />
+        <br />
+        <button type="button" id="getBlock">Get Transactions Block</button>
+        <br />
+        <br />
+        <br />
+        <label for="keypairSourceID">Choose Source:</label>
+        <select id="keypairSourceID" name="keypairSource">
+        <option value="privkey" selected>From Private Key</option>
+        <option value="pubkey">From Public Key</option>
+        <option value="wif">From Wif</option>
+        <option value="random">Random</option>
+        </select> 
+
+        <br />
+        <br />
+        <label for="chooseNetworkID">Choose Network:</label>
+        <select id="chooseNetworkID" name="chooseNetwork">
+        <option value="mainnet" selected>Mainnet</option>
+        <option value="testnet">Testnet</option>
+        <option value="signet">Signet</option>
+        </select> 
+
+        <br />
+        <br />
+
+        <label for="value">Source Value :</label>
+        <input type="text" id="sourceValue" value="d4473603292312d2b5662cc05e27df987a101c4f7b6428107df84b9595ecbffe" required> 
+        <button type="button" id="createKeyPair"> createKeyPair </button>
+         <!-- sendBTC<button type="button" id="getTransactionDetails">View Transaction Details</button> -->
+         <!-- <label for="amount">Enter Amount(BTC):</label>
+         <input type="text" id="amount" required> 
+         <button type="button" id="getRedeemScript">Get RedeemscriptHex</button>
+         <input type="text" id="redeemScriptHex" value="010101029301038801027693010487" required> 
+         <button type="button" id="getTransactionHex">Get Hex Address</button>
+         <button type="button" id="getWalletInfo">Get Wallet Info</button>
+         <input type="text" id="preimage" value="010101029301038801027693010487" required> 
+         <button type="button" id="getWalletAddress">Get Wallet Address</button>
+         <button type="button" id="sendBtc">Send BTC</button> -->
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/assets/js/app.js" type="module" ></script>
+</body>
+</html>
